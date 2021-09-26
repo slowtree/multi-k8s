@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: multik8s-stampingdesign-it-tls
+spec:
+  secretName: multik8s-stampingdesign-it
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: multik8s.stampingdesign.it
+  dnsNames:
+    - multik8s.stampingdesign.it
+    - www.multik8s.stampingdesign.it
