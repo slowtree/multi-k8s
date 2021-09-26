@@ -9,7 +9,6 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
-      - selectors: {}
-        http01:
+      - http01:
           ingress:
             class: nginx
